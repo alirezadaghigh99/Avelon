@@ -3,12 +3,27 @@
     android:orientation="vertical" android:layout_width="match_parent"
 
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/add_user_button"
-        android:text="@string/add_next_user"
-        android:background="#bbbbbb"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_user_button"
+            android:text="@string/add_next_user"
+            android:background="#bbbbff"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp" />
+        <Button
+            android:id="@+id/go_to_game_button"
+            android:text="@string/let_s_go"
+            android:background="#bbbbbb"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp" />
+
+    </LinearLayout>
+
     <GridLayout
         android:id="@+id/edit_text_container"
         android:orientation="vertical"

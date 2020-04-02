@@ -3,4 +3,5 @@
     <string name="no_user_added">no user added</string>
     <string name="player_hint">Player number %d</string>
     <string name="add_next_user">add next user</string>
+    <string name="let_s_go">let\'s go</string>
 </resources>
