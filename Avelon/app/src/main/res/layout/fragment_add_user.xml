@@ -6,6 +6,7 @@
     <Button
         android:id="@+id/add_user_button"
         android:text="@string/add_next_user"
+        android:background="#bbbbbb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <GridLayout
