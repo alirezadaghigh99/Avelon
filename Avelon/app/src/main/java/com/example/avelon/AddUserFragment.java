@@ -46,7 +46,7 @@ public class AddUserFragment extends Fragment {
 
     }
 
-    private GridLayout gridLayout;
+    private LinearLayout gridLayout;
     private Button button;
     private AddUserEditTextHandler addUserHandler;
 
