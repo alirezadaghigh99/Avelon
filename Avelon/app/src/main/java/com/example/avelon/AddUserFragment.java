@@ -20,18 +20,15 @@ import androidx.fragment.app.Fragment;
 import java.util.List;
 
 public class AddUserFragment extends Fragment {
-    Button addUserButton;
-     private static final int MAX_PLAYER = 10;
+    private LinearLayout mlayout;
+    private Button button;
+    private AddUserEditTextHandler addUserHandler;
+    private static final int MAX_PLAYER = 10;
     private boolean isFinished = false;
     private final int[] id = new int[1];
     private Button nextPageButton;
-
-    TextView firstUser;
-    public int numberOfLines = 3;
-    EditText editText;
-
+    private EditText editText;
     private List<User> users;
-    ConstraintLayout myLayout = null;
 
     public List<User> getUsers() {
         return users;
@@ -45,9 +42,6 @@ public class AddUserFragment extends Fragment {
 
     }
 
-    private LinearLayout mlayout;
-    private Button button;
-    private AddUserEditTextHandler addUserHandler;
 
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
@@ -58,10 +52,9 @@ public class AddUserFragment extends Fragment {
         nextPageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (id[0]<4){
-                    Toast.makeText(getActivity() , "Not enough player",Toast.LENGTH_LONG).show();
-                }
-                else {
+                if (id[0] < 4) {
+                    Toast.makeText(getActivity(), "Not enough player", Toast.LENGTH_LONG).show();
+                } else {
                     //TODO
                 }
             }
@@ -80,7 +73,7 @@ public class AddUserFragment extends Fragment {
                 if (!isFinished) {
                     addUserHandler = new AddUserEditTextHandler(getActivity());
 
-                    if (id[0]==0||!isEmpty(editText) ) {
+                    if (id[0] == 0 || !isEmpty(editText)) {
 
 
                         editText = addUserHandler.userAdder(getActivity(), id[0]);
@@ -89,10 +82,8 @@ public class AddUserFragment extends Fragment {
                         id[0] = id[0] + 1;
                         Log.d("tttta", "id is" + id[0]);
                         checkStatement(id[0]);
-                    }
-
-                    else {
-                        Toast.makeText(getActivity(),"no name added" , Toast.LENGTH_LONG);
+                    } else {
+                        Toast.makeText(getActivity(), "no name added", Toast.LENGTH_LONG);
                     }
                 }
 
@@ -113,6 +104,7 @@ public class AddUserFragment extends Fragment {
             isFinished = true;
         configure();
     }
+
     private boolean isEmpty(EditText etText) {
         if (etText.getText().toString().trim().length() > 0)
             return false;
