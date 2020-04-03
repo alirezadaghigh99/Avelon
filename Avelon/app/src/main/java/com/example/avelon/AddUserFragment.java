@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,7 +45,7 @@ public class AddUserFragment extends Fragment {
 
     }
 
-    private LinearLayout gridLayout;
+    private LinearLayout mlayout;
     private Button button;
     private AddUserEditTextHandler addUserHandler;
 
@@ -86,7 +85,7 @@ public class AddUserFragment extends Fragment {
 
                         editText = addUserHandler.userAdder(getActivity(), id[0]);
 
-                        gridLayout.addView(editText);
+                        mlayout.addView(editText);
                         id[0] = id[0] + 1;
                         Log.d("tttta", "id is" + id[0]);
                         checkStatement(id[0]);
@@ -104,7 +103,7 @@ public class AddUserFragment extends Fragment {
     }
 
     private void findView(View view) {
-        gridLayout = view.findViewById(R.id.edit_text_container);
+        mlayout = view.findViewById(R.id.edit_text_container);
         button = view.findViewById(R.id.add_user_button);
         nextPageButton = view.findViewById(R.id.go_to_game_button);
     }
