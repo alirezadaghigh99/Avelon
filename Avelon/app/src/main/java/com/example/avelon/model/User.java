@@ -1,4 +1,4 @@
-package com.example.avelon;
+package com.example.avelon.model;
 
 public class User {
     private String name;

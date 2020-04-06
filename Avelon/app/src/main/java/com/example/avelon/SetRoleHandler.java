@@ -1,5 +1,7 @@
 package com.example.avelon;
 
+import com.example.avelon.model.User;
+
 import java.util.List;
 import java.util.Random;
 
