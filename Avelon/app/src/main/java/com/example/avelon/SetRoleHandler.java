@@ -30,7 +30,7 @@ public class SetRoleHandler {
         return users;
     }
 
-    private void setRoleConstraint(User user) {
+    public void setRoleConstraint(User user) {
         boolean roleSeted = false;
         int randomNumber = Math.abs (rd.nextInt() % users.size());
         if (randomNumber == 0 && !percivalFlag) {
